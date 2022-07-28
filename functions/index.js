@@ -14,6 +14,14 @@ app.get ('/another-one', (req,res) => {
     res.send("This one works, too!")
 }) 
 
+app.post('/add-one',  (req,res) => {
+    res.send ('add this one as well')
+})
+
+app.delete('/delete-one', (req,res) => {
+    Array.splice(3,1)
+})
+
 exports.api= functions.https.onRequest(app) // same thing as ((req, res)=> app (req,res))
 
 
