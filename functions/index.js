@@ -14,6 +14,10 @@ app.get ('/another-one', (req,res) => {
     res.send("This one works, too!")
 }) 
 
+app.get('/', (req,res)=> {
+    res.send ('sending all items')
+})
+
 exports.api= functions.https.onRequest(app) // same thing as ((req, res)=> app (req,res))
 
 
